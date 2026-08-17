@@ -1,5 +1,6 @@
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
+const categoryFilter = document.getElementById("categoryFilter");
 const bookGrid = document.getElementById("bookGrid");
 
 function displayBooks(bookList) {
@@ -51,21 +52,31 @@ function displayBooks(bookList) {
     });
 }
 
-function searchBooks() {
+function filterBooks() {
     const searchTerm = searchInput.value.trim().toLowerCase();
+    const selectedCategory = categoryFilter.value;
 
-    const filteredBooks = books.filter(book =>
-        book.title.toLowerCase().includes(searchTerm) ||
-        book.author.toLowerCase().includes(searchTerm)
-    );
+    const filteredBooks = books.filter(book => {
+        const matchesSearch =
+            book.title.toLowerCase().includes(searchTerm) ||
+            book.author.toLowerCase().includes(searchTerm);
+
+        const matchesCategory =
+            selectedCategory === "all" ||
+            book.category === selectedCategory;
+
+        return matchesSearch && matchesCategory;
+    });
 
     displayBooks(filteredBooks);
 }
 
-searchButton.addEventListener("click", searchBooks);
+searchButton.addEventListener("click", filterBooks);
 
 searchInput.addEventListener("keyup", event => {
     if (event.key === "Enter") {
-        searchBooks();
+        filterBooks();
     }
 });
+
+categoryFilter.addEventListener("change", filterBooks);
