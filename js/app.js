@@ -10,6 +10,9 @@ const modalCategory = document.getElementById("modalCategory");
 const modalTitle = document.getElementById("modalTitle");
 const modalAuthor = document.getElementById("modalAuthor");
 const modalDescription = document.getElementById("modalDescription");
+const reservationForm = document.getElementById("reservationForm");
+const reservationMessage = document.getElementById("reservationMessage");
+
 
 function displayBooks(bookList) {
     bookGrid.innerHTML = "";
@@ -122,4 +125,13 @@ bookModal.addEventListener("click", event => {
     if (event.target === bookModal) {
         closeBookDetails();
     }
+});
+
+reservationForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    reservationMessage.textContent =
+        "Book reserved successfully!";
+
+    reservationForm.reset();
 });
