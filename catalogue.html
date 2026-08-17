@@ -316,6 +316,40 @@
                     <p class="book-author" id="modalAuthor"></p>
 
                     <p id="modalDescription"></p>
+                    <form id="reservationForm" class="reservation-form">
+
+    <h3>Reserve this book</h3>
+
+    <label for="reservationName">Full Name</label>
+    <input
+        type="text"
+        id="reservationName"
+        required
+        placeholder="Enter your full name"
+    >
+
+    <label for="reservationEmail">Email Address</label>
+    <input
+        type="email"
+        id="reservationEmail"
+        required
+        placeholder="Enter your email"
+    >
+
+    <label for="reservationDate">Reservation Date</label>
+    <input
+        type="date"
+        id="reservationDate"
+        required
+    >
+
+    <button type="submit" class="reservation-button">
+        Reserve Book
+    </button>
+
+    <p id="reservationMessage" class="reservation-message"></p>
+
+</form>
 
                 </div>
 

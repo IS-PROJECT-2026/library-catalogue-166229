@@ -633,3 +633,57 @@ footer {
     }
 
 }
+/* Reservation Form */
+
+.reservation-form {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.reservation-form h3 {
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.reservation-form input {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.reservation-form input:focus {
+    border-color: #6366f1;
+}
+
+.reservation-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #6366f1;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reservation-button:hover {
+    opacity: 0.9;
+}
+
+.reservation-message {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #16a34a;
+}
