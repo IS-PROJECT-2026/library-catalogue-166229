@@ -687,3 +687,91 @@ footer {
     font-weight: 600;
     color: #16a34a;
 }
+/* Mobile Responsiveness Improvements */
+
+@media (max-width: 650px) {
+
+    .book-modal {
+        padding: 12px;
+        overflow-y: auto;
+    }
+
+    .book-modal-content {
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    .modal-cover {
+        height: 140px;
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    .modal-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .reservation-form {
+        margin-top: 20px;
+    }
+
+    .reservation-form input {
+        font-size: 16px;
+    }
+
+    .reservation-button {
+        padding: 13px;
+    }
+
+    .catalogue-controls {
+        width: 100%;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .catalogue-controls select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .book-modal {
+        padding: 8px;
+    }
+
+    .book-modal-content {
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    .modal-cover {
+        height: 120px;
+        font-size: 3rem;
+    }
+
+    .modal-info h2 {
+        font-size: 1.25rem;
+    }
+
+    .reservation-form h3 {
+        font-size: 1.1rem;
+    }
+
+    .reservation-form label {
+        font-size: 0.85rem;
+    }
+
+    .reservation-form input {
+        padding: 10px;
+    }
+
+    .reservation-message {
+        font-size: 0.9rem;
+        word-break: break-word;
+    }
+}
