@@ -84,10 +84,13 @@ function showBookDetails(bookId) {
     modalDescription.textContent = book.description;
 
     bookModal.classList.add("active");
+    bookModal.setAttribute("aria-hidden", "false");
+    modalClose.focus();
 }
 
 function closeBookDetails() {
     bookModal.classList.remove("active");
+    bookModal.setAttribute("aria-hidden", "true");
 }
 
 function filterBooks() {
@@ -189,3 +192,10 @@ reservationForm.addEventListener("submit", event => {
 
     reservationForm.reset();
 });
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && bookModal.classList.contains("active")) {
+        closeBookDetails();
+    }
+});
+

@@ -11,11 +11,13 @@
 
 <body>
 
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="navbar">
         <div class="container nav-content">
             <a href="index.html" class="logo">Library Catalogue</a>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <a href="index.html" class="active">Home</a>
                 <a href="catalogue.html">Catalogue</a>
                 <a href="about.html">About</a>
@@ -23,7 +25,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
 
         <section class="hero">
             <div class="container hero-content">
@@ -60,25 +62,25 @@
                 <div class="category-grid">
 
                     <div class="category-card">
-                        <div class="category-icon">📚</div>
+                        <div class="category-icon" aria-hidden="true">ðŸ“š</div>
                         <h3>Fiction</h3>
                         <p>Stories, novels and imaginative worlds.</p>
                     </div>
 
                     <div class="category-card">
-                        <div class="category-icon">🔬</div>
+                        <div class="category-icon" aria-hidden="true">ðŸ”¬</div>
                         <h3>Science</h3>
                         <p>Discover the world through science.</p>
                     </div>
 
                     <div class="category-card">
-                        <div class="category-icon">💻</div>
+                        <div class="category-icon" aria-hidden="true">ðŸ’»</div>
                         <h3>Technology</h3>
                         <p>Programming, computing and innovation.</p>
                     </div>
 
                     <div class="category-card">
-                        <div class="category-icon">🌍</div>
+                        <div class="category-icon" aria-hidden="true">ðŸŒ</div>
                         <h3>History</h3>
                         <p>Explore events and civilizations of the past.</p>
                     </div>
@@ -99,7 +101,7 @@
                 <div class="book-grid">
 
                     <article class="book-card">
-                        <div class="book-cover">📖</div>
+                        <div class="book-cover" aria-hidden="true">ðŸ“–</div>
                         <div class="book-info">
                             <h3>The Great Gatsby</h3>
                             <p>F. Scott Fitzgerald</p>
@@ -108,7 +110,7 @@
                     </article>
 
                     <article class="book-card">
-                        <div class="book-cover">📘</div>
+                        <div class="book-cover" aria-hidden="true">ðŸ“˜</div>
                         <div class="book-info">
                             <h3>1984</h3>
                             <p>George Orwell</p>
@@ -117,7 +119,7 @@
                     </article>
 
                     <article class="book-card">
-                        <div class="book-cover">📕</div>
+                        <div class="book-cover" aria-hidden="true">ðŸ“•</div>
                         <div class="book-info">
                             <h3>Clean Code</h3>
                             <p>Robert C. Martin</p>

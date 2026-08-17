@@ -11,6 +11,8 @@
 
 <body>
 
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="navbar">
         <div class="container nav-content">
 
@@ -18,7 +20,7 @@
                 Library Catalogue
             </a>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="catalogue.html" class="active">Catalogue</a>
                 <a href="about.html">About</a>
@@ -27,7 +29,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
 
         <!-- Page Header -->
 
@@ -101,7 +103,7 @@
                     <article class="catalogue-book">
 
                         <div class="catalogue-cover">
-                            📖
+                            ðŸ“–
                         </div>
 
                         <div class="catalogue-book-info">
@@ -133,7 +135,7 @@
                     <article class="catalogue-book">
 
                         <div class="catalogue-cover">
-                            📘
+                            ðŸ“˜
                         </div>
 
                         <div class="catalogue-book-info">
@@ -165,7 +167,7 @@
                     <article class="catalogue-book">
 
                         <div class="catalogue-cover">
-                            💻
+                            ðŸ’»
                         </div>
 
                         <div class="catalogue-book-info">
@@ -197,7 +199,7 @@
                     <article class="catalogue-book">
 
                         <div class="catalogue-cover">
-                            🔬
+                            ðŸ”¬
                         </div>
 
                         <div class="catalogue-book-info">
@@ -229,7 +231,7 @@
                     <article class="catalogue-book">
 
                         <div class="catalogue-cover">
-                            🌍
+                            ðŸŒ
                         </div>
 
                         <div class="catalogue-book-info">
@@ -261,7 +263,7 @@
                     <article class="catalogue-book">
 
                         <div class="catalogue-cover">
-                            📕
+                            ðŸ“•
                         </div>
 
                         <div class="catalogue-book-info">
@@ -297,11 +299,11 @@
 
             <!-- Book Details Modal -->
 
-        <div class="book-modal" id="bookModal">
+        <div class="book-modal" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" aria-hidden="true">
 
             <div class="book-modal-content">
 
-                <button class="modal-close" id="modalClose">
+                <button class="modal-close" id="modalClose" type="button" aria-label="Close book details">
                     &times;
                 </button>
 
@@ -347,7 +349,7 @@
         Reserve Book
     </button>
 
-    <p id="reservationMessage" class="reservation-message"></p>
+    <p id="reservationMessage" class="reservation-message" role="status" aria-live="polite"></p>
 
 </form>
 
