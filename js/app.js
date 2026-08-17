@@ -130,6 +130,23 @@ bookModal.addEventListener("click", event => {
 reservationForm.addEventListener("submit", event => {
     event.preventDefault();
 
+    const reservation = {
+        name: document.getElementById("reservationName").value,
+        email: document.getElementById("reservationEmail").value,
+        date: document.getElementById("reservationDate").value,
+        book: modalTitle.textContent
+    };
+
+    const reservations =
+        JSON.parse(localStorage.getItem("reservations")) || [];
+
+    reservations.push(reservation);
+
+    localStorage.setItem(
+        "reservations",
+        JSON.stringify(reservations)
+    );
+
     reservationMessage.textContent =
         "Book reserved successfully!";
 
