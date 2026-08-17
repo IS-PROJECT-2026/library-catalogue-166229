@@ -1,1 +1,1 @@
-Feature branch conflicting version
+Merge conflict successfully resolved for Issue #19.
