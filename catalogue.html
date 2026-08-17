@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Catalogue | Library Catalogue</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="index.html" class="logo">
+                Library Catalogue
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="catalogue.html" class="active">Catalogue</a>
+                <a href="about.html">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Page Header -->
+
+        <section class="catalogue-header">
+            <div class="container">
+
+                <p class="eyebrow">OUR COLLECTION</p>
+
+                <h1>Book Catalogue</h1>
+
+                <p>
+                    Explore our collection of books and discover
+                    something new to read.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Search and Filters -->
+
+        <section class="catalogue-section">
+
+            <div class="container">
+
+                <div class="catalogue-controls">
+
+                    <div class="search-box">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search by title or author..."
+                        >
+
+                        <button id="searchButton">
+                            Search
+                        </button>
+                    </div>
+
+                    <select id="categoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="Fiction">
+                            Fiction
+                        </option>
+
+                        <option value="Science">
+                            Science
+                        </option>
+
+                        <option value="Technology">
+                            Technology
+                        </option>
+
+                        <option value="History">
+                            History
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Book Collection -->
+
+                <div class="catalogue-grid" id="bookGrid">
+
+                    <article class="catalogue-book">
+
+                        <div class="catalogue-cover">
+                            📖
+                        </div>
+
+                        <div class="catalogue-book-info">
+
+                            <span class="book-category">
+                                Fiction
+                            </span>
+
+                            <h2>The Great Gatsby</h2>
+
+                            <p class="book-author">
+                                F. Scott Fitzgerald
+                            </p>
+
+                            <p>
+                                A classic novel exploring wealth,
+                                ambition and the American Dream.
+                            </p>
+
+                            <button class="details-button">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="catalogue-book">
+
+                        <div class="catalogue-cover">
+                            📘
+                        </div>
+
+                        <div class="catalogue-book-info">
+
+                            <span class="book-category">
+                                Fiction
+                            </span>
+
+                            <h2>1984</h2>
+
+                            <p class="book-author">
+                                George Orwell
+                            </p>
+
+                            <p>
+                                A dystopian novel about surveillance,
+                                control and individual freedom.
+                            </p>
+
+                            <button class="details-button">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="catalogue-book">
+
+                        <div class="catalogue-cover">
+                            💻
+                        </div>
+
+                        <div class="catalogue-book-info">
+
+                            <span class="book-category">
+                                Technology
+                            </span>
+
+                            <h2>Clean Code</h2>
+
+                            <p class="book-author">
+                                Robert C. Martin
+                            </p>
+
+                            <p>
+                                Principles and practices for writing
+                                clean and maintainable software.
+                            </p>
+
+                            <button class="details-button">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="catalogue-book">
+
+                        <div class="catalogue-cover">
+                            🔬
+                        </div>
+
+                        <div class="catalogue-book-info">
+
+                            <span class="book-category">
+                                Science
+                            </span>
+
+                            <h2>A Brief History of Time</h2>
+
+                            <p class="book-author">
+                                Stephen Hawking
+                            </p>
+
+                            <p>
+                                An introduction to cosmology,
+                                space and the nature of time.
+                            </p>
+
+                            <button class="details-button">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="catalogue-book">
+
+                        <div class="catalogue-cover">
+                            🌍
+                        </div>
+
+                        <div class="catalogue-book-info">
+
+                            <span class="book-category">
+                                History
+                            </span>
+
+                            <h2>Sapiens</h2>
+
+                            <p class="book-author">
+                                Yuval Noah Harari
+                            </p>
+
+                            <p>
+                                An exploration of human history and
+                                the development of civilization.
+                            </p>
+
+                            <button class="details-button">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="catalogue-book">
+
+                        <div class="catalogue-cover">
+                            📕
+                        </div>
+
+                        <div class="catalogue-book-info">
+
+                            <span class="book-category">
+                                Fiction
+                            </span>
+
+                            <h2>To Kill a Mockingbird</h2>
+
+                            <p class="book-author">
+                                Harper Lee
+                            </p>
+
+                            <p>
+                                A story about justice, childhood and
+                                social inequality.
+                            </p>
+
+                            <button class="details-button">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <p>
+                &copy; 2026 Library Catalogue
+            </p>
+
+            <p>
+                Discover. Learn. Read.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/books.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
