@@ -147,8 +147,13 @@ reservationForm.addEventListener("submit", event => {
         JSON.stringify(reservations)
     );
 
-    reservationMessage.textContent =
-        "Book reserved successfully!";
+    reservationMessage.innerHTML = `
+    <strong>Reservation confirmed!</strong><br>
+    Book: ${reservation.book}<br>
+    Name: ${reservation.name}<br>
+    Email: ${reservation.email}<br>
+    Date: ${reservation.date}
+`;
 
     reservationForm.reset();
 });
