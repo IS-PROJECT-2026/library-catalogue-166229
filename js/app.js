@@ -130,10 +130,42 @@ bookModal.addEventListener("click", event => {
 reservationForm.addEventListener("submit", event => {
     event.preventDefault();
 
+    const name = document.getElementById("reservationName").value.trim();
+    const email = document.getElementById("reservationEmail").value.trim();
+    const date = document.getElementById("reservationDate").value;
+
+    // Validate required fields
+    if (!name || !email || !date) {
+        reservationMessage.textContent =
+            "Please fill in all reservation fields.";
+        return;
+    }
+
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        reservationMessage.textContent =
+            "Please enter a valid email address.";
+        return;
+    }
+
+    // Validate reservation date
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const selectedDate = new Date(date + "T00:00:00");
+
+    if (selectedDate < today) {
+        reservationMessage.textContent =
+            "Reservation date cannot be in the past.";
+        return;
+    }
+
     const reservation = {
-        name: document.getElementById("reservationName").value,
-        email: document.getElementById("reservationEmail").value,
-        date: document.getElementById("reservationDate").value,
+        name: name,
+        email: email,
+        date: date,
         book: modalTitle.textContent
     };
 
@@ -148,12 +180,12 @@ reservationForm.addEventListener("submit", event => {
     );
 
     reservationMessage.innerHTML = `
-    <strong>Reservation confirmed!</strong><br>
-    Book: ${reservation.book}<br>
-    Name: ${reservation.name}<br>
-    Email: ${reservation.email}<br>
-    Date: ${reservation.date}
-`;
+        <strong>Reservation confirmed!</strong><br>
+        Book: ${reservation.book}<br>
+        Name: ${reservation.name}<br>
+        Email: ${reservation.email}<br>
+        Date: ${reservation.date}
+    `;
 
     reservationForm.reset();
 });
