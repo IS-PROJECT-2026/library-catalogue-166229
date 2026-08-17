@@ -421,28 +421,134 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .catalogue-header {
+        padding: 65px 0 50px;
+    }
+
+    .catalogue-header h1 {
+        font-size: 2.7rem;
+    }
+
 }
 
 @media (max-width: 650px) {
 
-    .catalogue-controls {
-        flex-direction: column;
+    .container {
+        width: 92%;
     }
 
-    .search-box {
-        width: 100%;
+    .nav-content {
+        padding: 15px 0;
     }
 
-    .catalogue-controls select {
-        width: 100%;
+    nav {
+        gap: 12px;
+        font-size: 0.95rem;
     }
 
-    .catalogue-grid {
-        grid-template-columns: 1fr;
+    .catalogue-header {
+        padding: 55px 0 40px;
     }
 
     .catalogue-header h1 {
         font-size: 2.3rem;
     }
 
+    .catalogue-header p:last-child {
+        font-size: 0.95rem;
+    }
+
+    .catalogue-section {
+        padding: 50px 0;
+    }
+
+    .catalogue-controls {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        min-width: 0;
+        padding: 13px 14px;
+    }
+
+    .search-box button {
+        padding: 13px 16px;
+    }
+
+    .catalogue-controls select {
+        width: 100%;
+        padding: 13px 14px;
+    }
+
+    .catalogue-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .catalogue-book-info {
+        padding: 18px;
+    }
+
+    .catalogue-book-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .catalogue-cover {
+        height: 190px;
+        font-size: 4rem;
+    }
+
+    .details-button {
+        width: 100%;
+        padding: 11px 18px;
+    }
+
 }
+
+@media (max-width: 400px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    nav {
+        gap: 9px;
+        font-size: 0.85rem;
+    }
+
+    .catalogue-header h1 {
+        font-size: 2rem;
+    }
+
+    .catalogue-header {
+        padding: 45px 0 35px;
+    }
+
+    .catalogue-section {
+        padding: 40px 0;
+    }
+
+    .catalogue-controls {
+        gap: 10px;
+    }
+
+    .search-box button {
+        padding: 13px 12px;
+    }
+
+    .catalogue-cover {
+        height: 170px;
+    }
+
+}
+
