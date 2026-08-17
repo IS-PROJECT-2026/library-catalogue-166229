@@ -3,6 +3,14 @@ const searchButton = document.getElementById("searchButton");
 const categoryFilter = document.getElementById("categoryFilter");
 const bookGrid = document.getElementById("bookGrid");
 
+const bookModal = document.getElementById("bookModal");
+const modalClose = document.getElementById("modalClose");
+const modalCover = document.getElementById("modalCover");
+const modalCategory = document.getElementById("modalCategory");
+const modalTitle = document.getElementById("modalTitle");
+const modalAuthor = document.getElementById("modalAuthor");
+const modalDescription = document.getElementById("modalDescription");
+
 function displayBooks(bookList) {
     bookGrid.innerHTML = "";
 
@@ -41,7 +49,7 @@ function displayBooks(bookList) {
                     ${book.description}
                 </p>
 
-                <button class="details-button">
+                <button class="details-button" data-book-id="${book.id}">
                     View Details
                 </button>
 
@@ -50,6 +58,33 @@ function displayBooks(bookList) {
 
         bookGrid.appendChild(bookCard);
     });
+
+    document.querySelectorAll(".details-button").forEach(button => {
+        button.addEventListener("click", () => {
+            const bookId = Number(button.dataset.bookId);
+            showBookDetails(bookId);
+        });
+    });
+}
+
+function showBookDetails(bookId) {
+    const book = books.find(book => book.id === bookId);
+
+    if (!book) {
+        return;
+    }
+
+    modalCover.textContent = book.cover;
+    modalCategory.textContent = book.category;
+    modalTitle.textContent = book.title;
+    modalAuthor.textContent = book.author;
+    modalDescription.textContent = book.description;
+
+    bookModal.classList.add("active");
+}
+
+function closeBookDetails() {
+    bookModal.classList.remove("active");
 }
 
 function filterBooks() {
@@ -80,3 +115,11 @@ searchInput.addEventListener("keyup", event => {
 });
 
 categoryFilter.addEventListener("change", filterBooks);
+
+modalClose.addEventListener("click", closeBookDetails);
+
+bookModal.addEventListener("click", event => {
+    if (event.target === bookModal) {
+        closeBookDetails();
+    }
+});

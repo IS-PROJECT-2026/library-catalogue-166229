@@ -552,3 +552,84 @@ footer {
 
 }
 
+/* Book Details Modal */
+
+.book-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.65);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 200;
+}
+
+.book-modal.active {
+    display: flex;
+}
+
+.book-modal-content {
+    position: relative;
+    width: min(600px, 100%);
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    line-height: 1;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #111827;
+}
+
+.modal-cover {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    border-radius: 8px;
+    font-size: 5rem;
+    margin-bottom: 25px;
+}
+
+.modal-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #111827;
+}
+
+.modal-info #modalDescription {
+    color: #6b7280;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+
+    .book-modal-content {
+        padding: 22px;
+    }
+
+    .modal-cover {
+        height: 150px;
+        font-size: 4rem;
+    }
+
+    .modal-info h2 {
+        font-size: 1.5rem;
+    }
+
+}
